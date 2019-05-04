@@ -4,4 +4,7 @@ from .models import Noticia
 @admin.register(Noticia)
 class NoticiaAdmin(admin.ModelAdmin):
     pass
-# Register your models here.
+
+@admin.register(MensagemDeContato)
+calss MensagemDeContatoAdmin(admin.ModelAdmin):
+    readonly_fields = ('data',)
